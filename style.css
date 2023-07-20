@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+   height: 100vh;
+    background-color: #0c192c;
+    background-image: url('images/ice\ tree.jpg'),linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bubles{
+    position: relative;
+    display: flex;
+}
+
+.bubles span{
+
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(105s / var(--i));
+}
+
+.bubles span:nth-child(even){
+
+    background-color: #ff2d75;
+    box-shadow:  0 0 0 10px #4fc3dc44,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+
+    100%{
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+/* Button Animation Star*/
+
